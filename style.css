@@ -1,0 +1,186 @@
+.all{
+	pointer-events: all;
+}
+.main{
+	opacity: 0;
+	pointer-events: none;
+}
+.popup{
+	position: absolute;
+	width: 400px;
+	height: 250px;
+	border-radius: 15px;
+	border: 2px solid black;
+	background: white;
+	box-shadow: 0 0 50px black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.nam{
+	color: black;
+	font-family: monospace;
+	font-size: 200%;
+	font-weight: bold;
+}
+#enter{
+	width: 75%;
+	margin: none;
+	border-radius: 10px;
+	border: 2px solid black;
+	height: 18%;
+	font-size: 180%;
+	font-weight: bold;
+	font-family: monospace;
+}
+.ok{
+	margin-top: 7%;
+	padding: 4%;
+	width: 20%;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 15px;
+	border: none;
+	background: black;
+	color: white;
+	border-radius: 10px;
+}
+.ok:hover{
+	background: lightblue;
+	color: black;
+	box-shadow: 0 0 10px black;
+}
+body{
+	text-transform: uppercase;
+	color: white;
+	background: black;
+	font-family: monospace;
+	text-align: center;
+}
+.container{
+	height: 100%;
+	width: 100%;
+	border-radius: 15px;
+	margin: 2px;
+	box-shadow: 0px 0px 25px white;
+}
+.head{
+	text-align: center;
+}
+img{
+	width: 280px;
+}
+.image{
+	text-align: center;
+	margin: 5px 0px;
+	display: flex;
+	justify-content: space-around;
+}
+.load{
+	display: none;
+}
+.points{
+	display: flex;
+	justify-content: space-around;
+}
+#result{
+	text-transform: none;
+	font-size: 40px;
+	margin-bottom: 15px;
+}
+.name{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 8px;
+}
+.p{
+	font-size: 30px;
+}
+.option{
+	justify-content: space-around;
+	display: flex;
+}
+.options{
+	float: left;
+	width: 150px;
+	border: 3.5px solid lightblue;
+	background: white;
+	color: black;
+	border-radius: 15px;
+	text-align: center;
+	padding: 15px 0px;
+	font-size: 20px;
+}
+.options:hover{
+	background: lightgrey;
+	border-color: darkblue;
+	font-weight: bold;
+	transition: 0.3s all liner;
+	cursor: pointer;
+}
+.designer{
+	height: 95px;
+	width: 100%;
+	box-shadow: 0px 0px 10px white;
+	display: flex;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	float: left;
+	justify-content: space-around;
+	text-transform: none;
+}
+a{
+	margin-right: 20px;
+}
+.line{
+	justify-content: space-around;
+}
+.fc{
+	width: 50px;
+}
+.in{
+	width: 35px;
+}
+
+@media screen and (max-width: 480px){
+	img{
+		width: 150px;
+	}
+	.options{
+
+		margin-bottom: 12px;
+		float: none;
+		width: 100%;
+		font-size: 25px;
+	}
+	.option{
+
+		display: block;
+		justify-content: none;
+	}
+	.name{
+		margin-top: 10px;
+		width: 100%;
+	}
+	.image{
+		margin: 15px 0px;
+		width: 100%;
+	}
+	.head{
+		width: 100%;
+	}
+	body{
+		margin-top: 5px;
+	}
+	.points{
+		margin: 30px;
+	}
+	#result{
+		font-size: 35px;
+	}
+	.popup{
+		width: 300px;
+		height: 200px;
+	}
+
+}

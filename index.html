@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rock Paper Scissor</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="all">
+	<div class="popup">
+		<div class="nam">
+			<p>Enter Your Name</p>
+		</div>
+		<input id="enter" type="text" placeholder="Dimpal Das" style = "text-transform: uppercase;" required>
+		<br>
+		<button type="button" class="ok" onclick="enterName()">OK</button>
+	</div>
+	<div class="main">
+	<div class="head">
+		<h1>Rock Paper Scissor</h1>
+	</div>
+
+	<div class="image">
+		<div class="computer">
+			<img src="./rComputer.png" width="250px" id="computer">
+		</div>
+		<div class="player">
+			<img src="./rPlayer.png" width="250px" id="player">
+		</div>
+	</div>
+
+	<div class="load">
+		<img src="load2.gif">
+	</div>
+	
+	<div class="name">
+		<div class="name p">Computer</div>
+		<div class="name p you" id="por">Player</div>
+	</div>
+	
+	<div class="points">
+		<div id="result"></div>
+	</div>
+	
+	<div class="option">
+		<button type="button" class="options" onclick="rclick()"><b>ROCK</b></button>
+		<button type="button" class="options" onclick="pclick()"><b>PAPER</b></button>
+		<button type="button" class="options" onclick="sclick()"><b>SCISSOR</b></button>
+	</div>
+	<br>
+	<div class="designer">
+		<div class="lines">
+			<p>Meet the designer</p>
+			<a href="https://www.facebook.com/dimpal.das.12576" target="_blank"><img class="fc" src="./fc.png"></a>
+			<a href="https://instagram.com/_im_dimpl?igshid=YmMyMTA2M2Y=" target="_blank"><img class="in" src="./in.png"></a>
+		</div>
+	</div>
+		
+	</div>
+	</div>
+	
+	<script>
+		result.innerText = "Let's Play";
+		
+		function enterName(){
+			var name = document.getElementById("enter").value;
+			let you = document.querySelector('.you');
+			por.innerText = name;
+			if(name === ""){
+				document.getElementById("enter").style.fontSize = '150%';
+				document.getElementById("enter").style.textTransform = 'none';
+				document.getElementById("enter").placeholder = "Enter your name here...";
+				enterName();
+			}
+
+			let popup = document.querySelector('.popup');
+			let main = document.querySelector('.main');
+			main.style.pointerEvents = 'all';
+			popup.style.display = 'none';
+			main.style.opacity = '1';
+		}
+
+		function rclick() {
+			const choice = ["r", "p", "s"];
+			let array = Math.floor(Math.random()*3);
+			let cchoice = choice[array];
+			document.getElementById("computer").src="./load.gif";
+			document.getElementById("player").src="./rPlayer.png";
+			result.innerText = "Loading...";
+			setTimeout(() => {
+				if(cchoice === "r"){
+					result.innerText = "DRAW";
+				}
+				else if(cchoice === "p"){
+					result.innerText = "YOU LOSE";
+				}
+				else{
+					result.innerText = "YOU WIN";
+				}
+				
+				
+			}, 1000)
+			setTimeout(() => {
+					document.getElementById("computer").src="./" + cchoice + "Computer.png";
+				}, 850)
+			
+		}
+		function pclick() {
+			const choice = ["r", "p", "s"];
+			let array = Math.floor(Math.random()*3);
+			let cchoice = choice[array];
+			document.getElementById("computer").src="./load.gif";
+			document.getElementById("player").src="./pPlayer.png";
+			result.innerText = "Loading...";
+			setTimeout(() => {
+				if(cchoice === "p"){
+					result.innerText = "DRAW";
+				}
+				else if(cchoice === "r"){
+					result.innerText = "YOU WIN";
+				}
+				else{
+					result.innerText = "YOU LOSE";
+				}
+				
+				
+			}, 1000)
+			setTimeout(() => {
+					document.getElementById("computer").src="./" + cchoice + "Computer.png";
+				
+				}, 850)
+		}
+		function sclick() {
+			const choice = ["r", "p", "s"];
+			let array = Math.floor(Math.random()*3);
+			let cchoice = choice[array];
+			document.getElementById("computer").src="./load.gif";
+			document.getElementById("player").src="./sPlayer.png";
+			result.innerText = "Loading...";
+			setTimeout(() => {
+				if(cchoice === "s"){
+					result.innerText = "DRAW";
+				}
+				else if(cchoice === "r"){
+					result.innerText = "YOU LOSE";
+				}
+				else{
+					result.innerText = "YOU WIN";
+				}
+				
+			}, 1000)
+			setTimeout(() => {
+					document.getElementById("computer").src="./" + cchoice + "Computer.png";
+				
+				}, 850)
+		}
+
+	</script>
+</body>
+</html>
