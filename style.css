@@ -10,8 +10,8 @@
 	width: 400px;
 	height: 250px;
 	border-radius: 15px;
-	border: 2px solid black;
-	background: white;
+	background: transparent;
+	background-image: radial-gradient(circle, black, blue, green);
 	box-shadow: 0 0 50px black;
 	top: 50%;
 	left: 50%;
@@ -32,6 +32,8 @@
 	font-size: 180%;
 	font-weight: bold;
 	font-family: monospace;
+	background: transparent;
+	outline: none;
 }
 .ok{
 	margin-top: 7%;
